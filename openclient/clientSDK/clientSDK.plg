@@ -1,0 +1,98 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: clientSDK - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\wl\LOCALS~1\Temp\RSP2B1.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "__WIN32__" /Fp"Debug/clientSDK.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\clientSDK\rtsp_stack\OPENClientCommon.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\wl\LOCALS~1\Temp\RSP2B1.tmp" 
+Creating temporary file "C:\DOCUME~1\wl\LOCALS~1\Temp\RSP2B2.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/clientSDK.pdb" /debug /machine:I386 /out:"Debug/clientSDK.exe" /pdbtype:sept 
+.\Debug\AMRAudioRTPSink.obj
+.\Debug\AMRAudioSource.obj
+.\Debug\AudioRTPSink.obj
+.\Debug\Base64.obj
+.\Debug\BasicHashTable.obj
+.\Debug\BasicTaskScheduler.obj
+.\Debug\BasicTaskScheduler0.obj
+.\Debug\BasicUDPSink.obj
+.\Debug\BasicUsageEnvironment.obj
+.\Debug\BasicUsageEnvironment0.obj
+.\Debug\DelayQueue.obj
+.\Debug\DigestAuthentication.obj
+.\Debug\EncoderMediaSubsession.obj
+.\Debug\EncoderSource.obj
+.\Debug\FramedFilter.obj
+.\Debug\FramedSource.obj
+.\Debug\GroupEId.obj
+.\Debug\Groupsock.obj
+.\Debug\GroupsockHelper.obj
+.\Debug\H264VideoRTPSink.obj
+.\Debug\H264VideoStreamFramer.obj
+.\Debug\HashTable.obj
+.\Debug\inet.obj
+.\Debug\IOHandlers.obj
+.\Debug\Locale.obj
+.\Debug\Media.obj
+.\Debug\MediaSession.obj
+.\Debug\MediaSink.obj
+.\Debug\MediaSource.obj
+.\Debug\MPEG4ESVideoRTPSink.obj
+.\Debug\MPEG4VideoStreamFramer.obj
+.\Debug\MPEGVideoStreamFramer.obj
+.\Debug\MPEGVideoStreamParser.obj
+.\Debug\MultiFramedRTPSink.obj
+.\Debug\NetAddress.obj
+.\Debug\NetInterface.obj
+.\Debug\OPENClientMain.obj
+.\Debug\openRTSP.obj
+.\Debug\our_md5.obj
+.\Debug\our_md5hl.obj
+.\Debug\rsa_crypto.obj
+.\Debug\RTCP.obj
+.\Debug\rtcp_from_spec.obj
+.\Debug\RTPInterface.obj
+.\Debug\RTPSink.obj
+.\Debug\RTPSource.obj
+.\Debug\RTSPClient.obj
+.\Debug\RTSPCommon.obj
+.\Debug\RTSPEncoderSession.obj
+.\Debug\RTSPOverHTTPServer.obj
+.\Debug\RTSPSdk.obj
+.\Debug\RTSPServer.obj
+.\Debug\ServerMediaSession.obj
+.\Debug\soapC.obj
+.\Debug\soapClient.obj
+.\Debug\stdsoap2.obj
+.\Debug\strDup.obj
+.\Debug\StreamParser.obj
+.\Debug\UsageEnvironment.obj
+.\Debug\VideoRTPSink.obj
+.\Debug\xvid_interface.obj
+..\lib\dbghelp.lib
+..\lib\libeay32.lib
+..\lib\libx264.lib
+..\lib\libxvidcore.lib
+.\Debug\OPENClientCommon.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\wl\LOCALS~1\Temp\RSP2B2.tmp"
+<h3>Output Window</h3>
+Compiling...
+OPENClientCommon.cpp
+Linking...
+LINK : warning LNK4098: defaultlib "LIBC" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+clientSDK.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>
