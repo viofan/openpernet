@@ -1,0 +1,962 @@
+win32 caused an Integer Divide by Zero (0xc0000094) 
+in module win32.exe at 001b:0040aa72.
+
+Exception handler called in testlive555.cpp - _Entry.
+Error occurred at 1/13/2011 16:07:26.
+E:\starvSDK\win32\win32.exe, run by wl.
+Operating system:  Windows XP (5.1.2600).
+2 processor(s), type 586.
+33% memory in use.
+2038 MBytes physical memory.
+1347 MBytes physical memory free.
+3409 MBytes paging file.
+2445 MBytes paging file free.
+2048 MBytes user address space.
+1973 MBytes user address space free.
+
+Context:
+EDI:    0x004e21f1  ESI: 0x02410f52  EAX:   0x0000000a
+EBX:    0x00000000  ECX: 0x7c810613  EDX:   0x00000000
+EIP:    0x0040aa72  EBP: 0x0013ff80  SegCs: 0x0000001b
+EFlags: 0x00010246  ESP: 0x0013fdf4  SegSs: 0x00000023
+
+Bytes at CS:EIP:
+f7 7c 24 10 89 44 24 18 68 c8 49 00 00 8d 4c 24 
+
+Stack:
+0x0013fdf4: 004e21f1 02410f52 0013ff80 02410ee0 .!N.R.A.......A.
+0x0013fe04: 00000000 0000000a 95f465f6 00000000 .........e......
+0x0013fe14: 02410178 024125e0 024125e0 0248f660 x.A..%A..%A.`.H.
+0x0013fe24: 00000000 024125d8 02410178 02410178 .....%A.x.A.x.A.
+0x0013fe34: 0038001c 00000002 00000f30 000014f4 ..8.....0.......
+0x0013fe44: 00081f45 00000000 00000000 00010001 E...............
+0x0013fe54: 00000000 56fd4e2d 00001d98 00000f30 ....-N.V....0...
+0x0013fe64: 00001774 00000000 00000000 00000000 t...............
+0x0013fe74: 00000000 00000000 02410178 02410178 ........x.A.x.A.
+0x0013fe84: 0016e120 00000005 00000000 00000028  ...........(...
+0x0013fe94: 6e005200 00150000 0013fc94 024121d8 .R.n.........!A.
+0x0013fea4: 0246a458 7c92e920 00004a41 ffffffff X.F. ..|AJ......
+0x0013feb4: 7c9301db 7c93150e 7c93154c 7c99e120 ...|...|L..| ..|
+0x0013fec4: 7c931522 0246a450 02410f52 00000000 "..|P.F.R.A.....
+0x0013fed4: 00000000 0246a450 00025208 0246a458 ....P.F..R..X.F.
+0x0013fee4: 02410178 02410178 00025208 00001638 x.A.x.A..R..8...
+0x0013fef4: 00003993 0013fae4 7c99e140 0013ff70 .9......@..|p...
+0x0013ff04: 7c839af0 7c810618 ffffffff 7c810613 ...|...|.......|
+0x0013ff14: 7c810665 ffffffff 00000000 00000000 e..|............
+0x0013ff24: 0040a0f0 00000000 00000000 004bcf44 ..@.........D.K.
+0x0013ff34: 0013ff80 0040a190 00000000 00000000 ......@.........
+0x0013ff44: 0040a0f0 0013ff70 004814d6 ffffffff ..@.p.....H.....
+0x0013ff54: 0040af10 00000012 00000000 7ffd6000 ..@..........`..
+0x0013ff64: 00473396 0013ff58 0013fa20 0013ffb0 .3G.X... .......
+0x0013ff74: 00473248 004a04a8 00000000 0013ffc0 H2G...J.........
+0x0013ff84: 004754f9 0000000b 02410ee0 02410f68 .TG.......A.h.A.
+0x0013ff94: 00000012 00000000 7ffd6000 00000000 .........`......
+0x0013ffa4: 80503f3c 0013ff94 806e6ef2 0013ffe0 <?P......nn.....
+0x0013ffb4: 00473248 004a7a28 00000000 0013fff0 H2G.(zJ.........
+0x0013ffc4: 7c816fe7 00000012 00000000 7ffd6000 .o.|.........`..
+0x0013ffd4: 8054b6ed 0013ffc8 8812d700 ffffffff ..T.............
+0x0013ffe4: 7c839af0 7c816ff0 00000000 00000000 ...|.o.|........
+0x0013fff4: 00000000 00475445 00000000          ....ETG.....
+
+Module 1
+E:\starvSDK\win32\XClientDLL.dll
+Image Base: 0x10000000  Image Size: 0x0000b000
+Checksum:   0x00000000  Time Stamp: 0x4d06cbc7
+File Size:  40960       File Time:  12/14/2010 09:43:36
+Version Information:
+   Company:    
+   Product:    XClientDLL Dynamic Link Library
+   FileDesc:   XClientDLL DLL
+   FileVer:    1.1.1.16
+   ProdVer:    1.1.1.16
+
+Module 2
+E:\starvSDK\win32\NVClientDLL.dll
+Image Base: 0x10000000  Image Size: 0x00020000
+Checksum:   0x00000000  Time Stamp: 0x44693eef
+File Size:  118784      File Time:  5/16/2006 10:54:40
+Version Information:
+   Company:    
+   Product:    NVClientDLL Dynamic Link Library
+   FileDesc:   NVClientDLL DLL
+   FileVer:    1.0.0.5
+   ProdVer:    1.0.0.5
+
+Module 3
+E:\starvSDK\win32\NVClient.dll
+Image Base: 0x10000000  Image Size: 0x00011000
+Checksum:   0x00000000  Time Stamp: 0x49598ddc
+File Size:  65536       File Time:  12/30/2008 10:56:30
+Version Information:
+   Company:    Guangzhou INFO Tech. Co., Ltd.
+   Product:    NVClient Dynamic Link Library
+   FileDesc:   NVClient DLL for NV HIK HIKNET DHNET
+   FileVer:    3.0.0.1
+   ProdVer:    3.0.0.1
+
+Module 4
+E:\starvSDK\win32\XPlayDLL.dll
+Image Base: 0x10000000  Image Size: 0x0000a000
+Checksum:   0x00000000  Time Stamp: 0x4809acc5
+File Size:  36864       File Time:  4/19/2008 16:26:46
+Version Information:
+   Company:    
+   Product:    XPlayDLL Dynamic Link Library
+   FileDesc:   XPlayDLL DLL
+   FileVer:    1.3.1.0
+   ProdVer:    1.3.1.0
+
+Module 5
+E:\starvSDK\win32\NVPlayM4.dll
+Image Base: 0x10000000  Image Size: 0x0001b000
+Checksum:   0x00000000  Time Stamp: 0x47bfd4a2
+File Size:  106496      File Time:  2/23/2008 16:09:08
+Version Information:
+   Company:    Guangzhou INFO Tech. Co., Ltd.
+   Product:    NVPlayM4 Dynamic Link Library
+   FileDesc:   NVPlayM4 DLL
+   FileVer:    1.8.0.3
+   ProdVer:    1.8.0.3
+
+Module 6
+E:\starvSDK\win32\win32.exe
+Image Base: 0x00400000  Image Size: 0x00155000
+Checksum:   0x00000000  Time Stamp: 0x4d1c56f0
+File Size:  794668      File Time:  12/30/2010 17:54:58
+Version Information:
+   Company:    
+   Product:    
+   FileDesc:   
+   FileVer:    0.0.0.0
+   ProdVer:    0.0.0.0
+
+Module 7
+E:\starvSDK\win32\hikclient.dll
+Image Base: 0x10000000  Image Size: 0x0008e000
+Checksum:   0x00000000  Time Stamp: 0x44a63a41
+File Size:  217088      File Time:  7/1/2006 17:02:56
+Version Information:
+   Company:    Hangzhou Hikvision Digital Technology Co,.Ltd
+   Product:    hikclient Dynamic Link Library
+   FileDesc:   hikclient DLL
+   FileVer:    4.6.0.5
+   ProdVer:    4.6.0.5
+
+Module 8
+E:\starvSDK\win32\DS40xxSDK.dll
+Image Base: 0x10000000  Image Size: 0x00281000
+Checksum:   0x00000000  Time Stamp: 0x44c75466
+File Size:  2539520     File Time:  7/26/2006 19:39:18
+Version Information:
+   Company:    HangZhou Hikvision Digital Technology Co.,Ltd
+   Product:    DS-400xx series
+   FileDesc:   DS-400xx series SDK for Windows
+   FileVer:    4.2.10.60726
+   ProdVer:    4.2.0.0
+
+Module 9
+C:\WINDOWS\system32\Normaliz.dll
+Image Base: 0x00400000  Image Size: 0x00009000
+Checksum:   0x00010188  Time Stamp: 0x44a3ec46
+File Size:  23552       File Time:  1/7/2009 18:20:36
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Unicode Normalization DLL
+   FileVer:    6.0.5441.0
+   ProdVer:    6.0.5441.0
+
+Module 10
+E:\starvSDK\win32\dhplay.dll
+Image Base: 0x10000000  Image Size: 0x00177000
+Checksum:   0x00000000  Time Stamp: 0x47155cbd
+File Size:  630784      File Time:  10/17/2007 08:52:14
+Version Information:
+   Company:    
+   Product:    dhplay
+   FileDesc:   dhplay
+   FileVer:    3.19.4.828
+   ProdVer:    3.19.4.828
+
+Module 11
+E:\starvSDK\win32\dllh264.dll
+Image Base: 0x10000000  Image Size: 0x00050000
+Checksum:   0x00000000  Time Stamp: 0x44f3f4a4
+File Size:  114688      File Time:  8/30/2006 16:02:26
+Version Information:
+   Company:    
+   Product:    
+   FileDesc:   
+   FileVer:    0.0.0.0
+   ProdVer:    0.0.0.0
+
+Module 12
+E:\starvSDK\win32\DllDeinterlace.dll
+Image Base: 0x10000000  Image Size: 0x0000d000
+Checksum:   0x00000000  Time Stamp: 0x46283263
+File Size:  49152       File Time:  4/20/2007 11:24:20
+Version Information:
+   Company:    海思半导体有限公司 Hisilicon, Co., Ltd.
+   Product:    hisilicon DllDeinterlace
+   FileDesc:   DllDeinterlace
+   FileVer:    1.1.0.2
+   ProdVer:    1.1.0.2
+
+Module 13
+E:\starvSDK\win32\hi_h264dec.dll
+Image Base: 0x10000000  Image Size: 0x00029000
+Checksum:   0x00000000  Time Stamp: 0x457d547e
+File Size:  163840      File Time:  12/11/2006 20:52:14
+Version Information:
+   Company:    海思半导体有限公司 Hisilicon, Co., Ltd.
+   Product:    H264 Decode Lib
+   FileDesc:   hi_h264dec.dll
+   FileVer:    1.0.0.18
+   ProdVer:    1.0.0.18
+
+Module 14
+E:\starvSDK\win32\AmrDll.dll
+Image Base: 0x10000000  Image Size: 0x00029000
+Checksum:   0x00000000  Time Stamp: 0x46283456
+File Size:  159744      File Time:  4/20/2007 11:32:40
+Version Information:
+   Company:    海思半导体有限公司 Hisilicon, Co., Ltd.
+   Product:    amr-nb
+   FileDesc:   AmrDll
+   FileVer:    1.0.2.3
+   ProdVer:    1.0.2.3
+
+Module 15
+E:\starvSDK\win32\HCNetSDK.dll
+Image Base: 0x10000000  Image Size: 0x0009a000
+Checksum:   0x00000000  Time Stamp: 0x45b4353d
+File Size:  286720      File Time:  5/27/2009 16:37:56
+Version Information:
+   Company:    
+   Product:    HCNetSDK Dynamic Link Library
+   FileDesc:   HCNetSDK DLL
+   FileVer:    2.1.1.18
+   ProdVer:    2.1.1.18
+
+Module 16
+E:\starvSDK\win32\playm4.dll
+Image Base: 0x20000000  Image Size: 0x0024f000
+Checksum:   0x00000000  Time Stamp: 0x46e9a3b6
+File Size:  589824      File Time:  5/27/2009 16:37:56
+Version Information:
+   Company:    
+   Product:    playm4 Dynamic Link Library
+   FileDesc:   playm4 DLL
+   FileVer:    4.8.0.1
+   ProdVer:    4.8.0.1
+
+Module 17
+E:\starvSDK\win32\DsSDK.dll
+Image Base: 0x10000000  Image Size: 0x001dc000
+Checksum:   0x00000000  Time Stamp: 0x438ea4b0
+File Size:  1859584     File Time:  5/27/2009 16:38:02
+Version Information:
+   Company:    
+   Product:    DsSdk Dynamic Link Library
+   FileDesc:   DsSdk DLL
+   FileVer:    4.13.0.51201
+   ProdVer:    4.13.0.0
+
+Module 18
+E:\starvSDK\win32\dhnetsdk.dll
+Image Base: 0x10000000  Image Size: 0x00054000
+Checksum:   0x00000000  Time Stamp: 0x4757acdd
+File Size:  335872      File Time:  12/6/2007 16:03:44
+Version Information:
+   Company:    
+   Product:    dhnetsdk
+   FileDesc:   dhnetsdk
+   FileVer:    3.2.0.0
+   ProdVer:    3.2.0.0
+
+Module 19
+E:\starvSDK\win32\dhdvr.dll
+Image Base: 0x10000000  Image Size: 0x0001d000
+Checksum:   0x00000000  Time Stamp: 0x4757acc8
+File Size:  110592      File Time:  12/6/2007 16:03:22
+Version Information:
+   Company:    
+   Product:    dhdvr
+   FileDesc:   dhdvr
+   FileVer:    3.2.0.0
+   ProdVer:    3.2.0.0
+
+Module 20
+E:\starvSDK\win32\AudioRecordEx.dll
+Image Base: 0x10000000  Image Size: 0x0000d000
+Checksum:   0x00000000  Time Stamp: 0x46b13e5f
+File Size:  49152       File Time:  8/2/2007 10:19:58
+Version Information:
+   Company:    
+   Product:    
+   FileDesc:   
+   FileVer:    0.0.0.0
+   ProdVer:    0.0.0.0
+
+Module 21
+C:\Program Files\360\360Safe\safemon\safemon.dll
+Image Base: 0x00100000  Image Size: 0x00077000
+Checksum:   0x00071375  Time Stamp: 0x4d1e942f
+File Size:  411040      File Time:  1/1/2011 10:42:38
+Version Information:
+   Company:    360.cn
+   Product:    360安全卫士
+   FileDesc:   360安全卫士 网盾防护模块
+   FileVer:    6.7.8.1010
+   ProdVer:    6.7.8.1010
+
+Module 22
+C:\WINDOWS\system32\LIBEAY32.dll
+Image Base: 0x10000000  Image Size: 0x0010f000
+Checksum:   0x00000000  Time Stamp: 0x45e9fe59
+File Size:  1097728     File Time:  5/31/2007 09:42:06
+Version Information:
+   Company:    The OpenSSL Project, http://www.openssl.org/
+   Product:    The OpenSSL Toolkit
+   FileDesc:   OpenSSL Shared Library
+   FileVer:    0.9.8.5
+   ProdVer:    0.9.8.5
+
+Module 23
+E:\starvSDK\win32\HikPlayM4.dll
+Image Base: 0x20000000  Image Size: 0x00252000
+Checksum:   0x00000000  Time Stamp: 0x46c07f1a
+File Size:  598016      File Time:  8/13/2007 23:56:12
+Version Information:
+   Company:    HangZhou Hikvision Digital Technology Co,.Ltd
+   Product:    HikPlayM4 Dynamic Link Library
+   FileDesc:   HikPlayM4 DLL
+   FileVer:    4.8.0.0
+   ProdVer:    4.8.0.0
+
+Module 24
+C:\WINDOWS\system32\WININET.dll
+Image Base: 0x3e410000  Image Size: 0x000e6000
+Checksum:   0x000e15ab  Time Stamp: 0x4be29a89
+File Size:  916480      File Time:  5/6/2010 18:31:38
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Internet Explorer
+   FileDesc:   Internet Extensions for Win32
+   FileVer:    8.0.6001.18923
+   ProdVer:    8.0.6001.18923
+
+Module 25
+C:\WINDOWS\system32\iertutil.dll
+Image Base: 0x3eab0000  Image Size: 0x001e8000
+Checksum:   0x001f1749  Time Stamp: 0x4be29a7d
+File Size:  1985536     File Time:  5/6/2010 18:31:30
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Internet Explorer
+   FileDesc:   Run time utility for Internet Explorer
+   FileVer:    8.0.6001.18923
+   ProdVer:    8.0.6001.18923
+
+Module 26
+C:\WINDOWS\system32\urlmon.dll
+Image Base: 0x43ce0000  Image Size: 0x00133000
+Checksum:   0x00132288  Time Stamp: 0x4be29a89
+File Size:  1209344     File Time:  5/6/2010 18:31:38
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Internet Explorer
+   FileDesc:   OLE32 Extensions for Win32
+   FileVer:    8.0.6001.18923
+   ProdVer:    8.0.6001.18923
+
+Module 27
+C:\WINDOWS\system32\uxtheme.dll
+Image Base: 0x5adc0000  Image Size: 0x00037000
+Checksum:   0x000405f2  Time Stamp: 0x411095a1
+File Size:  216064      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Microsoft UxTheme Library
+   FileVer:    6.0.2900.2180
+   ProdVer:    6.0.2900.2180
+
+Module 28
+C:\WINDOWS\system32\COMCTL32.dll
+Image Base: 0x5d170000  Image Size: 0x0009a000
+Checksum:   0x000a3f90  Time Stamp: 0x4c7296d2
+File Size:  617472      File Time:  8/23/2010 23:42:10
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Common Controls Library
+   FileVer:    5.82.2900.3744
+   ProdVer:    6.0.2900.3744
+
+Module 29
+C:\WINDOWS\system32\NETAPI32.dll
+Image Base: 0x5fdd0000  Image Size: 0x00054000
+Checksum:   0x0005221a  Time Stamp: 0x48f62174
+File Size:  332800      File Time:  10/16/2008 00:59:32
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Net Win32 API DLL
+   FileVer:    5.1.2600.3462
+   ProdVer:    5.1.2600.3462
+
+Module 30
+C:\WINDOWS\system32\hnetcfg.dll
+Image Base: 0x60fd0000  Image Size: 0x00055000
+Checksum:   0x00056d85  Time Stamp: 0x41214548
+File Size:  333824      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Home Networking Configuration Manager
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 31
+C:\WINDOWS\system32\MFC42LOC.DLL
+Image Base: 0x61be0000  Image Size: 0x0000d000
+Checksum:   0x0001c3a9  Time Stamp: 0x3b901732
+File Size:  53248       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft (R) Visual C++
+   FileDesc:   MFC Language Specific Resources
+   FileVer:    6.0.8665.0
+   ProdVer:    6.0.4.0
+
+Module 32
+C:\WINDOWS\system32\LPK.DLL
+Image Base: 0x62c20000  Image Size: 0x00009000
+Checksum:   0x0000910b  Time Stamp: 0x41214556
+File Size:  22016       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Language Pack
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 33
+C:\Program Files\Bonjour\mdnsNSP.dll
+Image Base: 0x64000000  Image Size: 0x00025000
+Checksum:   0x0002ad7c  Time Stamp: 0x4c4f8a15
+File Size:  152864      File Time:  7/27/2010 18:44:08
+Version Information:
+   Company:    Apple Inc.
+   Product:    Bonjour
+   FileDesc:   Bonjour Namespace Provider
+   FileVer:    2.0.3.0
+   ProdVer:    2.0.3.0
+
+Module 34
+C:\WINDOWS\system32\dbghelp.dll
+Image Base: 0x68d60000  Image Size: 0x000a1000
+Checksum:   0x0009e582  Time Stamp: 0x41214541
+File Size:  640000      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Image Helper
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 35
+C:\WINDOWS\System32\mswsock.dll
+Image Base: 0x719c0000  Image Size: 0x0003e000
+Checksum:   0x0003ba4e  Time Stamp: 0x485beb63
+File Size:  240640      File Time:  6/21/2008 01:39:48
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Microsoft Windows Sockets 2.0 Service Provider
+   FileVer:    5.1.2600.3394
+   ProdVer:    5.1.2600.3394
+
+Module 36
+C:\WINDOWS\System32\wshtcpip.dll
+Image Base: 0x71a00000  Image Size: 0x00008000
+Checksum:   0x0000b6df  Time Stamp: 0x412145c2
+File Size:  19968       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Sockets Helper DLL
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 37
+C:\WINDOWS\system32\WS2HELP.dll
+Image Base: 0x71a10000  Image Size: 0x00008000
+Checksum:   0x0000d5a1  Time Stamp: 0x412145b8
+File Size:  19968       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Windows Socket 2.0 Helper for Windows NT
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 38
+C:\WINDOWS\system32\WS2_32.dll
+Image Base: 0x71a20000  Image Size: 0x00017000
+Checksum:   0x0001aaef  Time Stamp: 0x412145b7
+File Size:  82944       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Socket 2.0 32-Bit DLL
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 39
+C:\WINDOWS\system32\WSOCK32.dll
+Image Base: 0x71a40000  Image Size: 0x0000b000
+Checksum:   0x00016377  Time Stamp: 0x412145c4
+File Size:  28672       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Windows Socket 32-Bit DLL
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 40
+C:\WINDOWS\system32\WINSPOOL.DRV
+Image Base: 0x72f70000  Image Size: 0x00026000
+Checksum:   0x00024934  Time Stamp: 0x4121457a
+File Size:  145920      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Windows Spooler Driver
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 41
+C:\WINDOWS\system32\DDRAW.dll
+Image Base: 0x736d0000  Image Size: 0x00049000
+Checksum:   0x00045bf6  Time Stamp: 0x41214547
+File Size:  265728      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Microsoft DirectDraw
+   FileVer:    5.3.2600.2180
+   ProdVer:    5.3.2600.2180
+
+Module 42
+C:\WINDOWS\system32\AVIFIL32.dll
+Image Base: 0x73ac0000  Image Size: 0x00017000
+Checksum:   0x0001e0cc  Time Stamp: 0x4b100047
+File Size:  84992       File Time:  11/28/2009 00:37:28
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Microsoft AVI File support library
+   FileVer:    5.1.2600.3649
+   ProdVer:    5.1.2600.3649
+
+Module 43
+C:\WINDOWS\system32\DCIMAN32.dll
+Image Base: 0x73b30000  Image Size: 0x00006000
+Checksum:   0x000046c6  Time Stamp: 0x41214546
+File Size:  8704        File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   DCI Manager
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 44
+C:\WINDOWS\system32\MSVFW32.dll
+Image Base: 0x73b40000  Image Size: 0x00020000
+Checksum:   0x000220e0  Time Stamp: 0x412145ff
+File Size:  119808      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Microsoft Video for Windows DLL
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 45
+C:\WINDOWS\system32\MFC42.DLL
+Image Base: 0x73d30000  Image Size: 0x000fe000
+Checksum:   0x001053e0  Time Stamp: 0x41214551
+File Size:  1028096     File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft (R) Visual C++
+   FileDesc:   MFCDLL Shared Library - Retail Version
+   FileVer:    6.2.4131.0
+   ProdVer:    6.2.4.0
+
+Module 46
+C:\WINDOWS\system32\DSOUND.dll
+Image Base: 0x73e70000  Image Size: 0x0005c000
+Checksum:   0x000623ce  Time Stamp: 0x4121457b
+File Size:  367616      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   DirectSound
+   FileVer:    5.3.2600.2180
+   ProdVer:    5.3.2600.2180
+
+Module 47
+C:\WINDOWS\system32\USP10.dll
+Image Base: 0x73fa0000  Image Size: 0x0006b000
+Checksum:   0x00064858  Time Stamp: 0x41214579
+File Size:  406528      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Uniscribe Unicode script processor
+   FileDesc:   Uniscribe Unicode script processor
+   FileVer:    1.420.2600.2180
+   ProdVer:    1.420.2600.2180
+
+Module 48
+C:\WINDOWS\system32\MSCTF.dll
+Image Base: 0x74680000  Image Size: 0x0004b000
+Checksum:   0x00055913  Time Stamp: 0x4778dbf1
+File Size:  293376      File Time:  12/31/2007 20:09:22
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   MSCTF Server DLL
+   FileVer:    5.1.2600.3284
+   ProdVer:    5.1.2600.3284
+
+Module 49
+C:\WINDOWS\system32\MSVCP60.dll
+Image Base: 0x75ff0000  Image Size: 0x00065000
+Checksum:   0x00074cd9  Time Stamp: 0x412145fd
+File Size:  413696      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft (R) Visual C++
+   FileDesc:   Microsoft (R) C++ Runtime Library
+   FileVer:    6.2.3104.0
+   ProdVer:    6.2.3104.0
+
+Module 50
+C:\WINDOWS\system32\SETUPAPI.dll
+Image Base: 0x76060000  Image Size: 0x00156000
+Checksum:   0x00158320  Time Stamp: 0x4121456c
+File Size:  1388032     File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Windows Setup API
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 51
+C:\WINDOWS\system32\MSIMG32.dll
+Image Base: 0x762f0000  Image Size: 0x00005000
+Checksum:   0x0000bd86  Time Stamp: 0x412145d3
+File Size:  4608        File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   GDIEXT Client DLL
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 52
+C:\WINDOWS\system32\IMM32.DLL
+Image Base: 0x76300000  Image Size: 0x0001d000
+Checksum:   0x0001b3c0  Time Stamp: 0x41214561
+File Size:  110080      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows XP IMM32 API Client DLL
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 53
+C:\WINDOWS\system32\comdlg32.dll
+Image Base: 0x76320000  Image Size: 0x00047000
+Checksum:   0x00050f1d  Time Stamp: 0x4121455b
+File Size:  269312      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Common Dialogs DLL
+   FileVer:    6.0.2900.2180
+   ProdVer:    6.0.2900.2180
+
+Module 54
+C:\WINDOWS\system32\ole32.dll
+Image Base: 0x76990000  Image Size: 0x0013d000
+Checksum:   0x0013d0e0  Time Stamp: 0x42713a32
+File Size:  1284608     File Time:  4/29/2005 03:32:02
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Microsoft OLE for Windows
+   FileVer:    5.1.2600.2665
+   ProdVer:    5.1.2600.2665
+
+Module 55
+C:\WINDOWS\system32\WINMM.dll
+Image Base: 0x76b10000  Image Size: 0x0002a000
+Checksum:   0x0002f504  Time Stamp: 0x4121459a
+File Size:  163840      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   MCI API DLL
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 56
+C:\WINDOWS\system32\PSAPI.DLL
+Image Base: 0x76bc0000  Image Size: 0x0000b000
+Checksum:   0x0000a972  Time Stamp: 0x4121458a
+File Size:  23040       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Process Status Helper
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 57
+C:\WINDOWS\system32\Iphlpapi.dll
+Image Base: 0x76d30000  Image Size: 0x00018000
+Checksum:   0x0001798f  Time Stamp: 0x446dc4a0
+File Size:  94208       File Time:  5/19/2006 21:14:08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   IP Helper API
+   FileVer:    5.1.2600.2912
+   ProdVer:    5.1.2600.2912
+
+Module 58
+C:\WINDOWS\system32\DNSAPI.dll
+Image Base: 0x76ef0000  Image Size: 0x00027000
+Checksum:   0x00026525  Time Stamp: 0x485beb63
+File Size:  148992      File Time:  6/20/2008 23:09:48
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   DNS Client API DLL
+   FileVer:    5.1.2600.3394
+   ProdVer:    5.1.2600.3394
+
+Module 59
+C:\WINDOWS\system32\WLDAP32.dll
+Image Base: 0x76f30000  Image Size: 0x0002c000
+Checksum:   0x000372ff  Time Stamp: 0x41214580
+File Size:  170496      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Win32 LDAP API DLL
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 60
+C:\WINDOWS\System32\winrnr.dll
+Image Base: 0x76f80000  Image Size: 0x00008000
+Checksum:   0x00011823  Time Stamp: 0x41214576
+File Size:  16896       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   LDAP RnR Provider DLL
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 61
+C:\WINDOWS\system32\rasadhlp.dll
+Image Base: 0x76f90000  Image Size: 0x00006000
+Checksum:   0x00004214  Time Stamp: 0x44a01c53
+File Size:  8192        File Time:  6/27/2006 01:41:40
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Remote Access AutoDial Helper
+   FileVer:    5.1.2600.2938
+   ProdVer:    5.1.2600.2938
+
+Module 62
+C:\WINDOWS\system32\OLEAUT32.dll
+Image Base: 0x770f0000  Image Size: 0x0008b000
+Checksum:   0x00089853  Time Stamp: 0x47559f02
+File Size:  550912      File Time:  12/5/2007 02:40:02
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    
+   FileDesc:   
+   FileVer:    5.1.2600.3266
+   ProdVer:    5.1.2600.3266
+
+Module 63
+C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.3744_x-ww_d9c64cc6\comctl32.dll
+Image Base: 0x77180000  Image Size: 0x00103000
+Checksum:   0x0010c619  Time Stamp: 0x4c7296d0
+File Size:  1054208     File Time:  8/23/2010 23:42:08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   User Experience Controls Library
+   FileVer:    6.0.2900.3744
+   ProdVer:    6.0.2900.3744
+
+Module 64
+C:\WINDOWS\system32\MSACM32.dll
+Image Base: 0x77bb0000  Image Size: 0x00015000
+Checksum:   0x0001f853  Time Stamp: 0x4121457b
+File Size:  71168       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Microsoft ACM Audio Filter
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 65
+C:\WINDOWS\system32\VERSION.dll
+Image Base: 0x77bd0000  Image Size: 0x00008000
+Checksum:   0x0000e797  Time Stamp: 0x41214577
+File Size:  18944       File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Version Checking and File Installation Libraries
+   FileVer:    5.1.2600.2180
+   ProdVer:    5.1.2600.2180
+
+Module 66
+C:\WINDOWS\system32\msvcrt.dll
+Image Base: 0x77be0000  Image Size: 0x00058000
+Checksum:   0x00057166  Time Stamp: 0x412145fe
+File Size:  343040      File Time:  6/17/2005 18:37:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows NT CRT DLL
+   FileVer:    7.0.2600.2180
+   ProdVer:    6.1.8638.2180
+
+Module 67
+C:\WINDOWS\system32\USER32.dll
+Image Base: 0x77d10000  Image Size: 0x0008f000
+Checksum:   0x00099dcc  Time Stamp: 0x45f02db2
+File Size:  573952      File Time:  3/8/2007 23:37:22
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Windows XP USER API Client DLL
+   FileVer:    5.1.2600.3099
+   ProdVer:    5.1.2600.3099
+
+Module 68
+C:\WINDOWS\system32\ADVAPI32.dll
+Image Base: 0x77da0000  Image Size: 0x000a9000
+Checksum:   0x000ab235  Time Stamp: 0x498ffe8b
+File Size:  675328      File Time:  2/9/2009 17:59:40
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Advanced Windows 32 Base API
+   FileVer:    5.1.2600.3520
+   ProdVer:    5.1.2600.3520
+
+Module 69
+C:\WINDOWS\system32\RPCRT4.dll
+Image Base: 0x77e50000  Image Size: 0x00092000
+Checksum:   0x000902a5  Time Stamp: 0x4c68fb30
+File Size:  584192      File Time:  8/16/2010 16:47:44
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Remote Procedure Call Runtime
+   FileVer:    5.1.2600.3738
+   ProdVer:    5.1.2600.3738
+
+Module 70
+C:\WINDOWS\system32\GDI32.dll
+Image Base: 0x77ef0000  Image Size: 0x00048000
+Checksum:   0x00051aaf  Time Stamp: 0x49007520
+File Size:  283648      File Time:  10/23/2008 20:59:12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   GDI Client DLL
+   FileVer:    5.1.2600.3466
+   ProdVer:    5.1.2600.3466
+
+Module 71
+C:\WINDOWS\system32\SHLWAPI.dll
+Image Base: 0x77f40000  Image Size: 0x00076000
+Checksum:   0x00074f15  Time Stamp: 0x4b1e1854
+File Size:  473088      File Time:  12/8/2009 17:11:48
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Shell Light-weight Utility Library
+   FileVer:    6.0.2900.3653
+   ProdVer:    6.0.2900.3653
+
+Module 72
+C:\WINDOWS\system32\Secur32.dll
+Image Base: 0x77fc0000  Image Size: 0x00011000
+Checksum:   0x000176ec  Time Stamp: 0x4a4332ba
+File Size:  56320       File Time:  6/25/2009 16:18:02
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Security Support Provider Interface
+   FileVer:    5.1.2600.3592
+   ProdVer:    5.1.2600.3592
+
+Module 73
+C:\WINDOWS\system32\kernel32.dll
+Image Base: 0x7c800000  Image Size: 0x0011d000
+Checksum:   0x00125f70  Time Stamp: 0x49c4f753
+File Size:  1146880     File Time:  3/21/2009 22:19:00
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Windows NT BASE API Client DLL
+   FileVer:    5.1.2600.3541
+   ProdVer:    5.1.2600.3541
+
+Module 74
+C:\WINDOWS\system32\ntdll.dll
+Image Base: 0x7c920000  Image Size: 0x00096000
+Checksum:   0x000928d3  Time Stamp: 0x498ffe8a
+File Size:  598528      File Time:  2/9/2009 17:59:40
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   NT Layer DLL
+   FileVer:    5.1.2600.3520
+   ProdVer:    5.1.2600.3520
+
+Module 75
+C:\WINDOWS\system32\SHELL32.dll
+Image Base: 0x7d590000  Image Size: 0x007f3000
+Checksum:   0x007fa980  Time Stamp: 0x4c4e7f11
+File Size:  8313344     File Time:  7/27/2010 14:39:14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Windows(R) Operating System
+   FileDesc:   Windows Shell Common Dll
+   FileVer:    6.0.2900.3736
+   ProdVer:    6.0.2900.3736
+
+
+===== [end of ERRORLOG.TXT] =====

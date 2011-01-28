@@ -1,0 +1,10 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\CodeProject\XCrashReportTest]
+
+[HKEY_CURRENT_USER\Software\CodeProject\XCrashReportTest\Author]
+"Name"="Hans Dietrich"
+"Email"="hdietrich2@hotmail.com"
+
+[HKEY_CURRENT_USER\Software\CodeProject\XCrashReportTest\Program]
+"StartTime"="Thu Dec 30 14:41:44 2010"
