@@ -304,7 +304,7 @@ void RTSPClient::setUserAgentString(char const* userAgentName) {
   fUserAgentHeaderStrLen = strlen(fUserAgentHeaderStr);
 }
 
-unsigned RTSPClient::responseBufferSize = 20000; // default value; you can reassign this in your application if you need to
+unsigned RTSPClient::responseBufferSize = 40000; // default value; you can reassign this in your application if you need to
 
 RTSPClient::RTSPClient(UsageEnvironment& env, char const* rtspURL,
 		       int verbosityLevel, char const* applicationName,
@@ -1327,6 +1327,7 @@ void RTSPClient::incomingDataHandler1() {
   struct sockaddr_in dummy; // 'from' address - not used
 
   int bytesRead = readSocket(envir(), fInputSocketNum, (unsigned char*)&fResponseBuffer[fResponseBytesAlreadySeen], fResponseBufferBytesLeft, dummy);
+  //printf("Read %d bytes from socket, first byte is %x\n", bytesRead, fResponseBuffer[fResponseBytesAlreadySeen]);
   handleResponseBytes(bytesRead);
 }
 
@@ -1462,7 +1463,7 @@ int releaseDecoderResource()
 typedef void (CALLBACK *FrameCallBack)(void *handle,char *pBuf,long nSize,long nWidth,long nHeight);
 Boolean FrameStreamConnectDecoder(void *client, unsigned char *frame, unsigned useful_bytes)
 {
-	fprintf(stderr, "FrameStreamConnectDecoder start.\n");
+	fprintf(stderr, "Decoder handle %d bytes data.\n", useful_bytes);
 	RTSPClient *ourClient = (RTSPClient*)client;
 	xvid_dec_stats_t xvid_dec_stats;
 	unsigned char *framePtr = frame;
@@ -1519,19 +1520,11 @@ Boolean FrameStreamConnectDecoder(void *client, unsigned char *frame, unsigned u
 		
 	((FrameCallBack)ourClient->clientCallBack())(ourClient, (char*)out_buffer, FRAME_WIDTH * FRAME_HEIGHT * 3 / 2, FRAME_WIDTH, FRAME_HEIGHT);
 
-//	if(out_buffer) delete [] out_buffer;
-//	out_buffer = NULL;
-
-//	int status = releaseDecoderResource();
-//	if (status)   
-//	{
-//		fprintf(stderr, "decore RELEASE problem return value %d\n", status);
-//	}
-	fprintf(stderr, "FrameStreamConnectDecoder end.\n");
 	return TRUE;
 }
 
 void RTSPClient::handleResponseBytes(int newBytesRead) {
+	//unsigned short cseq = 0;
   do {
     if (newBytesRead > 0 && (unsigned)newBytesRead < fResponseBufferBytesLeft) break; // data was read OK; process it below
 
@@ -1554,75 +1547,79 @@ void RTSPClient::handleResponseBytes(int newBytesRead) {
     return;    
   } while (0);
 
-#if 1   /*add by wayde*/
-  static int FirstFrameData = 1;
-  unsigned char *ptr = &fResponseBuffer[fResponseBytesAlreadySeen];
 
-  if (fResponseBuffer[0] == '$')  // handle data packet
+/*add by wayde*/
+  if (fResponseBuffer[0] != (unsigned char)'$' && fResponseBuffer[0] != (unsigned char)'R')
   {
-	  unsigned short len = (fResponseBuffer[2] << 8) | fResponseBuffer[3];
+	  fprintf(stderr, "fResponseBuffer = %x %x %x %x\n", fResponseBuffer[0],fResponseBuffer[1],
+			fResponseBuffer[2],fResponseBuffer[3]);
+  }
 
-	  if ((unsigned char)fResponseBuffer[1] & 1)
+  if (fResponseBuffer[0] == (unsigned char)'$')
+  {
+	  fResponseBufferBytesLeft -= newBytesRead;
+	  fResponseBytesAlreadySeen += newBytesRead;
+	  while (fResponseBuffer[0] == (unsigned char)'$')  // handle data packet rtp over rtsp
 	  {
-		  fResponseBufferBytesLeft -= newBytesRead;
-		  fResponseBytesAlreadySeen += newBytesRead;
-		  if (fResponseBytesAlreadySeen >= len+4)
+		  unsigned short len = (fResponseBuffer[2] << 8) | fResponseBuffer[3];  // packet size 
+		  
+		  if ((unsigned char)fResponseBuffer[1] & 1) // received rtcp packet
 		  {
-			  memmove(fResponseBuffer, fResponseBuffer + len + 4, fResponseBytesAlreadySeen- len - 4);
-			  fResponseBytesAlreadySeen -= len + 4;	
-			  fResponseBufferBytesLeft += len + 4;
-		  }
-		  return;
-	  }
-	  unsigned RTPOverRTSP = 4;
-	  unsigned RTPHead = 12;
-	  unsigned totalRTPHead = RTPOverRTSP+RTPHead;
-	  //if (FirstFrameData)
-	  {
-		  fResponseBufferBytesLeft -= newBytesRead;
-		  fResponseBytesAlreadySeen += newBytesRead;
-
-		  if (fResponseBytesAlreadySeen >= len + 4)
-		  {
-			  if (fResponseBuffer[5] & 0x80) // marker bit
+			  if (fResponseBytesAlreadySeen >= (len+4))
 			  {
-				  memcpy(tempStreamBuffer+dataTotal, fResponseBuffer+totalRTPHead, len+4-totalRTPHead);
-				  dataTotal += len+4-totalRTPHead;
-#if 0
-				  FILE *stream_fp;
-				  static int cnt = 0;
-				  char name[128];
-				  fprintf(stderr, "cnt=%d\n", cnt);
-				  sprintf(name, "streamSource%d.yuv", cnt++);
-				  stream_fp = fopen(name, "wb+");
-				  fwrite(tempStreamBuffer, 1, dataTotal, stream_fp);
-				  fclose(stream_fp);
-#endif
+				  memmove(fResponseBuffer, fResponseBuffer + (len + 4), fResponseBytesAlreadySeen- (len + 4));
+				  fResponseBytesAlreadySeen -= (len + 4);	
+				  fResponseBufferBytesLeft += (len + 4);
+				  //fprintf(stderr, "filter rtcp packet len=%d, newBytesRead=%d,fResponseBytesAlreadySeen=%d, fResponseBufferBytesLeft=%d\n ",
+				  //  len, newBytesRead, fResponseBytesAlreadySeen, fResponseBufferBytesLeft);
+			  }
+			  return;
+		  }
+		  unsigned RTPOverRTSP = 4;
+		  unsigned RTPHead = 12;
+		  unsigned totalRTPHead = RTPOverRTSP+RTPHead;	  
+		  // received rtp packet 		  
+		  // cseq = (fResponseBuffer[6] << 8) | fResponseBuffer[7];
+		  if (fResponseBytesAlreadySeen >= (len+4))
+		  {
+			  if (fResponseBuffer[5] & 0x80) // marker bit ×îºó
+			  {
+				  memcpy(tempStreamBuffer+dataTotal, fResponseBuffer+totalRTPHead, (len+4)-totalRTPHead);
+				  dataTotal += (len+4)-totalRTPHead;
 				  FrameStreamConnectDecoder(this, tempStreamBuffer, dataTotal);
-				  FirstFrameData = 0;
 				  dataTotal = 0;
 			  }
 			  else 
 			  {
-				  memcpy(tempStreamBuffer+dataTotal, fResponseBuffer+totalRTPHead, len+4-totalRTPHead);
-				  dataTotal += len+4-totalRTPHead;
+				  memcpy(tempStreamBuffer+dataTotal, fResponseBuffer+totalRTPHead, (len+4)-totalRTPHead);
+				  dataTotal += (len+4)-totalRTPHead;
 			  }
-			  memmove(fResponseBuffer, fResponseBuffer + len + 4, fResponseBytesAlreadySeen- len - 4);
-			  fResponseBytesAlreadySeen -= len + 4;	
-			  fResponseBufferBytesLeft += len + 4;
-			  fprintf(stderr, "dataTotal=%d,fResponseBytesAlreadySeen=%d, fResponseBufferBytesLeft=%d\n", 
-				       dataTotal,fResponseBytesAlreadySeen, fResponseBufferBytesLeft);
+			  memmove(fResponseBuffer, fResponseBuffer + (len+4), fResponseBytesAlreadySeen- (len+4));
+			  fResponseBytesAlreadySeen -= (len + 4);	
+			  fResponseBufferBytesLeft += (len + 4);
+			  //fprintf(stderr, "dataTotal=%d,fResponseBytesAlreadySeen=%d, fResponseBufferBytesLeft=%d\n", 
+			//	  dataTotal,fResponseBytesAlreadySeen, fResponseBufferBytesLeft);
 		  }	
+		  else
+		  {
+			  return ;
+		  }
+//		  printf("RTP packet %d bytes\n", len);
+//		  printf("RTP packet sequence %d\n", cseq);
+		  //return ;
 	  }
-	  return ;
   }
-#endif
-
   fResponseBufferBytesLeft -= newBytesRead;
   fResponseBytesAlreadySeen += newBytesRead;
   fResponseBuffer[fResponseBytesAlreadySeen] = '\0';
 
   if (fVerbosityLevel >= 1 && newBytesRead > 1) envir() << "Received " << newBytesRead << " new bytes of response data.\n";
+  
+//   for (int k=0; k<4; k++)
+//   {
+// 	  fprintf(stderr, "fResponseBuffer[%d]=%x\t",k, fResponseBuffer[k]);
+//   }
+//   fprintf(stderr, "\n");
   
   // Data was read OK.  Look through the data that we've read so far, to see if it contains <CR><LF><CR><LF>.
   // (If not, wait for more data to arrive.)
@@ -1632,7 +1629,7 @@ void RTSPClient::handleResponseBytes(int newBytesRead) {
     char const* const ptrEnd = (char *)&fResponseBuffer[fResponseBytesAlreadySeen-3];
     char const* ptr = (char *)fResponseBuffer;
     while (ptr < ptrEnd) {
-      if (*ptr++ == '\r' && *ptr++ == '\n' && *ptr++ == '\r' && *ptr++ == '\n') {
+		if (*ptr++ == '\r' && *ptr++ == '\n' && *ptr++ == '\r' && *ptr++ == '\n') {
 	// This is it
         endOfHeaders = True;
         break;
@@ -1802,7 +1799,6 @@ void RTSPClient::handleResponseBytes(int newBytesRead) {
 	return; // without calling our response handler; the response to the resent command will do that
       }
     }
-
     responseSuccess = True;
   } while (0);
 

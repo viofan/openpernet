@@ -34,10 +34,17 @@ void (CALLBACK CapFrameFun)(void *handle,char * pBuf,long nSize,long nWidth,long
 	FILE *stream_fp;
 	char name[128];
 	static int cnt = 0;
-	sprintf(name, "streamStream%d.yuv", cnt++);
-	stream_fp = fopen(name, "wb");
-	fwrite(pBuf, 1, nWidth * nHeight * 3 / 2, stream_fp);
-	fclose(stream_fp);
+	if ((cnt%50) == 0)
+	{
+		sprintf(name, "%s//streamStream%d.yuv", "YUVPicture", cnt++);
+		stream_fp = fopen(name, "wb");
+		fwrite(pBuf, 1, nWidth * nHeight * 3 / 2, stream_fp);
+		fclose(stream_fp);
+	}
+	else
+	{
+		cnt++;
+	}
 #endif
 }
 

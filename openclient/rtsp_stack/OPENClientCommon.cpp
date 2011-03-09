@@ -136,7 +136,7 @@ unsigned movieFPS = 15; // default
 Boolean movieFPSOptionSet = False;
 char const* fileNamePrefix = "";
 unsigned fileSinkBufferSize = 100000;
-unsigned socketInputBufferSize = 0;
+unsigned socketInputBufferSize = 0;//32768;
 Boolean packetLossCompensate = False;
 Boolean syncStreams = False;
 Boolean generateHintTracks = False;
@@ -180,6 +180,7 @@ int getURLByWebserver1(ns1__GetDevCamerasUrls &fDevCameras, ns1__GetDevCamerasUr
 		}
 		printf("%s\n", fDevCamerasResponse.GetDevCamerasUrlsReturn->urlresult->__ptr[0]->weburl.c_str());
 		strcpy(requestURL, fDevCamerasResponse.GetDevCamerasUrlsReturn->urlresult->__ptr[0]->weburl.c_str());
+		//strcpy(requestURL,"rtsp://219.235.235.3:554/live/1/003234C67A04060D/OZrfgcjvdPw7dQCA.sdp?id=15210716106&t=1299231827&en=571f014e8a6a27d1f41bf4d6c1ff3df3&rs=wap");
 		//printf("%s\n", fDevCamerasResponse.GetDevCamerasUrlsReturn->urlresult->__ptr[1]->weburl.c_str());
 		//printf("%s\n", fDevCamerasResponse.GetDevCamerasUrlsReturn->urlresult->__ptr[2]->weburl.c_str());
 		//printf("%s\n", fDevCamerasResponse.GetDevCamerasUrlsReturn->urlresult->__ptr[3]->weburl.c_str());
