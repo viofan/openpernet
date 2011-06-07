@@ -571,7 +571,7 @@ void StreamState
 	Debug(ckite_log_message, "StreamState::startPlaying \n");
 	Debug(ckite_log_message, "StreamState::startPlaying  dests = %p\n", dests);
 	if (dests == NULL) return;
-#if 0
+#if 1
 	Debug(ckite_log_message, "dests->isTCP = %d\n", dests->isTCP);
 	if (dests->isTCP) {
 		// Change RTP and RTCP to use the TCP socket instead of UDP:
@@ -617,7 +617,7 @@ void StreamState
 					fRTPSink, NULL /* we're a server */);
 		// Note: This starts RTCP running automatically
 	}
-#if 1
+#if 0
 	Debug(ckite_log_message, "dests->isTCP = %d\n", dests->isTCP);
 	if (dests->isTCP) {
 		// Change RTP and RTCP to use the TCP socket instead of UDP:
@@ -647,7 +647,7 @@ void StreamState
 	}
 #endif
     //add by xzw 
-#if 0
+#if 1
 	if (dests->isTCP) {
 		if (fRTCPInstance != NULL) {
 		//	fRTCPInstance->addStreamSocket(dests->tcpSocketNum, dests->rtcpChannelId);
