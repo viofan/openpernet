@@ -6,13 +6,74 @@
 --------------------Configuration: clientSDK - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\DOCUME~1\wl\LOCALS~1\Temp\RSP2B1.tmp" with contents
+Creating temporary file "C:\DOCUME~1\wl\LOCALS~1\Temp\RSP378.tmp" with contents
 [
 /nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "__WIN32__" /Fp"Debug/clientSDK.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"E:\clientSDK\rtsp_stack\OPENClientCommon.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\AMRAudioRTPSink.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\AMRAudioSource.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\AudioRTPSink.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\Base64.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\BasicHashTable.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\BasicTaskScheduler.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\BasicTaskScheduler0.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\BasicUDPSink.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\BasicUsageEnvironment.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\BasicUsageEnvironment0.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\DelayQueue.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\DigestAuthentication.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\EncoderMediaSubsession.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\EncoderSource.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\FramedFilter.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\FramedSource.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\GroupEId.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\Groupsock.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\GroupsockHelper.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\H264VideoRTPSink.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\H264VideoStreamFramer.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\HashTable.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\inet.c"
+"E:\workspace\openpernet\openclient\rtsp_stack\IOHandlers.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\Locale.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\Media.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\MediaSession.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\MediaSink.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\MediaSource.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\MPEG4ESVideoRTPSink.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\MPEG4VideoStreamFramer.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\MPEGVideoStreamFramer.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\MPEGVideoStreamParser.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\MultiFramedRTPSink.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\NetAddress.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\NetInterface.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\OPENClientCommon.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\OPENClientMain.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\openRTSP.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\our_md5.c"
+"E:\workspace\openpernet\openclient\rtsp_stack\our_md5hl.c"
+"E:\workspace\openpernet\openclient\rtsp_stack\rsa_crypto.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTCP.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\rtcp_from_spec.c"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTPInterface.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTPSink.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTPSource.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTSPClient.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTSPCommon.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTSPEncoderSession.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTSPOverHTTPServer.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTSPSdk.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\RTSPServer.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\ServerMediaSession.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\soapC.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\soapClient.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\stdsoap2.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\strDup.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\StreamParser.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\UsageEnvironment.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\VideoRTPSink.cpp"
+"E:\workspace\openpernet\openclient\rtsp_stack\xvid_interface.cpp"
 ]
-Creating command line "cl.exe @C:\DOCUME~1\wl\LOCALS~1\Temp\RSP2B1.tmp" 
-Creating temporary file "C:\DOCUME~1\wl\LOCALS~1\Temp\RSP2B2.tmp" with contents
+Creating command line "cl.exe @C:\DOCUME~1\wl\LOCALS~1\Temp\RSP378.tmp" 
+Creating temporary file "C:\DOCUME~1\wl\LOCALS~1\Temp\RSP379.tmp" with contents
 [
 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/clientSDK.pdb" /debug /machine:I386 /out:"Debug/clientSDK.exe" /pdbtype:sept 
 .\Debug\AMRAudioRTPSink.obj
@@ -51,6 +112,7 @@ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32
 .\Debug\MultiFramedRTPSink.obj
 .\Debug\NetAddress.obj
 .\Debug\NetInterface.obj
+.\Debug\OPENClientCommon.obj
 .\Debug\OPENClientMain.obj
 .\Debug\openRTSP.obj
 .\Debug\our_md5.obj
@@ -80,19 +142,138 @@ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32
 ..\lib\libeay32.lib
 ..\lib\libx264.lib
 ..\lib\libxvidcore.lib
-.\Debug\OPENClientCommon.obj
 ]
-Creating command line "link.exe @C:\DOCUME~1\wl\LOCALS~1\Temp\RSP2B2.tmp"
+Creating command line "link.exe @C:\DOCUME~1\wl\LOCALS~1\Temp\RSP379.tmp"
 <h3>Output Window</h3>
 Compiling...
+AMRAudioRTPSink.cpp
+AMRAudioSource.cpp
+AudioRTPSink.cpp
+Base64.cpp
+BasicHashTable.cpp
+BasicTaskScheduler.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
+e:\workspace\openpernet\openclient\rtsp_stack\basictaskscheduler.cpp(54) : warning C4018: '<' : signed/unsigned mismatch
+BasicTaskScheduler0.cpp
+BasicUDPSink.cpp
+BasicUsageEnvironment.cpp
+BasicUsageEnvironment0.cpp
+DelayQueue.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
+DigestAuthentication.cpp
+EncoderMediaSubsession.cpp
+EncoderSource.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
+e:\workspace\openpernet\openclient\rtsp_stack\encodersource.cpp(402) : warning C4101: 'curr_time' : unreferenced local variable
+e:\workspace\openpernet\openclient\rtsp_stack\encodersource.cpp(501) : warning C4101: 'curr_time' : unreferenced local variable
+FramedFilter.cpp
+e:\workspace\openpernet\openclient\rtsp_stack\encodersource.cpp(555) : warning C4700: local variable 'frame' used without having been initialized
+FramedSource.cpp
+GroupEId.cpp
+Groupsock.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
+GroupsockHelper.cpp
+H264VideoRTPSink.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
+H264VideoStreamFramer.cpp
+HashTable.cpp
+inet.c
+IOHandlers.cpp
+Locale.cpp
+Media.cpp
+MediaSession.cpp
+MediaSink.cpp
+MediaSource.cpp
+MPEG4ESVideoRTPSink.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
+MPEG4VideoStreamFramer.cpp
+MPEGVideoStreamFramer.cpp
+MPEGVideoStreamParser.cpp
+MultiFramedRTPSink.cpp
+NetAddress.cpp
+NetInterface.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
 OPENClientCommon.cpp
+OPENClientMain.cpp
+openRTSP.cpp
+our_md5.c
+our_md5hl.c
+rsa_crypto.cpp
+RTCP.cpp
+e:\workspace\openpernet\openclient\rtsp_stack\rtcp.cpp(125) : warning C4355: 'this' : used in base member initializer list
+rtcp_from_spec.c
+RTPInterface.cpp
+RTPSink.cpp
+e:\workspace\openpernet\openclient\rtsp_stack\rtpsink.cpp(52) : warning C4355: 'this' : used in base member initializer list
+RTPSource.cpp
+e:\workspace\openpernet\openclient\rtsp_stack\rtpsource.cpp(55) : warning C4355: 'this' : used in base member initializer list
+RTSPClient.cpp
+e:\workspace\openpernet\openclient\rtsp_stack\rtspclient.cpp(1515) : warning C4101: 'dectime' : unreferenced local variable
+e:\workspace\openpernet\openclient\rtsp_stack\rtspclient.cpp(1568) : warning C4018: '>=' : signed/unsigned mismatch
+e:\workspace\openpernet\openclient\rtsp_stack\rtspclient.cpp(1583) : warning C4018: '>=' : signed/unsigned mismatch
+RTSPCommon.cpp
+e:\workspace\openpernet\openclient\rtsp_stack\rtspcommon.cpp(286) : warning C4018: '<' : signed/unsigned mismatch
+e:\workspace\openpernet\openclient\rtsp_stack\rtspcommon.cpp(452) : warning C4018: '<' : signed/unsigned mismatch
+RTSPEncoderSession.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
+e:\workspace\openpernet\openclient\rtsp_stack\rtspencodersession.cpp(573) : warning C4101: 'audioSubsession' : unreferenced local variable
+e:\workspace\openpernet\openclient\rtsp_stack\rtspencodersession.cpp(1522) : warning C4550: expression evaluates to a function which is missing an argument list
+RTSPOverHTTPServer.cpp
+RTSPSdk.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
+RTSPServer.cpp
+c:\program files\microsoft visual studio\vc98\include\errno.h(76) : warning C4005: 'EINTR' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(48) : see previous definition of 'EINTR'
+c:\program files\microsoft visual studio\vc98\include\errno.h(83) : warning C4005: 'EAGAIN' : macro redefinition
+        e:\workspace\openpernet\openclient\rtsp_stack\netcommon.h(44) : see previous definition of 'EAGAIN'
+e:\workspace\openpernet\openclient\rtsp_stack\rtspserver.cpp(600) : warning C4101: 'outLen' : unreferenced local variable
+ServerMediaSession.cpp
+e:\workspace\openpernet\openclient\rtsp_stack\rtspserver.cpp(406) : warning C4700: local variable 'out' used without having been initialized
+e:\workspace\openpernet\openclient\rtsp_stack\rtspserver.cpp(428) : warning C4700: local variable 'out' used without having been initialized
+e:\workspace\openpernet\openclient\rtsp_stack\rtspserver.cpp(626) : warning C4700: local variable 'out' used without having been initialized
+soapC.cpp
+soapClient.cpp
+stdsoap2.cpp
+strDup.cpp
+StreamParser.cpp
+UsageEnvironment.cpp
+VideoRTPSink.cpp
+xvid_interface.cpp
+e:\workspace\openpernet\openclient\rtsp_stack\xvid_interface.cpp(210) : warning C4700: local variable 'ret' used without having been initialized
 Linking...
 LINK : warning LNK4098: defaultlib "LIBC" conflicts with use of other libs; use /NODEFAULTLIB:library
 
 
 
 <h3>Results</h3>
-clientSDK.exe - 0 error(s), 1 warning(s)
+clientSDK.exe - 0 error(s), 40 warning(s)
 </pre>
 </body>
 </html>
