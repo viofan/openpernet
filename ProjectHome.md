@@ -1,0 +1,1 @@
+Openpernet is an open platform which provide uniform video streaming access to IP cameras. Openpernet supports RTSP/RTP/HTTP protocols, compatible with many RTSP-based IP cameras, as well as RTSP client software such as Realplayer, Quicktime Player, VLC, etc.
